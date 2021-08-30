@@ -1,0 +1,21 @@
+Runtime complexity questions (Q4) for MIDTERM 2
+
+#1 
+
+For each value of i, the inner loop executes i^2 times.
+Adding those up (for 0 <= i < n), you get 1^2 + 2^2 + 3^2 + ... + (n-1)^2
+= (n-1)(n)(2n - 1)/6, which means the complexity is O(n^3)
+
+#2 The inner loop runs n times, and the outer loop runs log n times, so multiplying the two 
+(as there is no way the outer loop affects the inner loop), the runtime complexity is
+O(n log(n))
+
+#3 The outer loop doesn't affect the complexity, as for very big n, the 100000 loops become very
+insignificant. for each iteration of the outer loop, the inner loop runs 10^n times,
+so the number of steps is 100000 * 10^n, or the runtime complexity is O(10^n)
+
+#4 The number of iterations of the inner loop is log(n^2), as j starts as n^2 and goes down to 1,
+but n is divided by 2 each time. This is multiplied by the outer, loop, which iterates log(n) times.
+Multiplying those together, you get log(n^2) * log(n) = 2log(n) * log(n) = 2log(n^2)
+So the complexity is O(log(n^2))
+

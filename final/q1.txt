@@ -1,0 +1,24 @@
+#Q1 PART (A)
+
+Given a sorted array a of length n,
+algo for equalIndex to find if there exists an i for which a[i] = i
+
+function equalIndex(a,n):
+#Base case (n = 1):
+if a[0] = 0 return True
+else return False
+
+#Otherwise (n > 1):
+Let l = n/2;
+if (a[l] > l) return equalIndex(a[0:l], l);
+else if (a[l-1] < l-1){
+	for element in a:
+		element = element - l;
+	return equalIndex(a[l:],n-l); 
+}
+else return True;
+
+#Q1 PART (B)
+
+The outer loop executes n/2 times, and the inner loop executes log n times
+(n/2) * log n = (n log n)/2, so the runtime of the function fun is O(n log n)

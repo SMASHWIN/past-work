@@ -1,0 +1,31 @@
+#Problem 2
+
+#Order functions by their growth rates
+
+#original order
+2^n
+n log(n)
+n
+sqrt(n)
+n^(log n)
+log(log (n))
+2^(log(n))
+ln(n)
+n + sqrt(n)
+log(n)
+log(n^2)
+n(log n)^2
+
+#orderered by growth rate from smallest to biggest
+#equal growth rates are marked with "=" signs
+
+log(log(n))
+ln(n) = log(n) = log(n^2)
+sqrt(n)
+2^(log n)
+n = n + sqrt(n)
+n log(n)
+n(log n)^2
+n^(log n)
+2^n
+

@@ -1,0 +1,31 @@
+Q1:
+
+(1.) Point3d& operator+(Point3d& lhs, Point3d& rhs);
+
+(2.) 
+3, 6, 5
+3, 6, 5
+3, 6, 5
+
+(There might be a memory leak as the p3 pointer was never freed from the heap)
+ 
+
+Q2:
+
+const bag& operator=(const bag& rhs){
+	if (this == &rhs) return *this;
+	used = rhs.size();
+	for (int i = 0; i < used; i++){
+		this->data[i] = rhs.data[i];
+	}
+	return *this;
+}
+
+bag(const bag& b){
+	used = rhs.used;
+	for (int i = 0; i < used; i++){
+		data[i] = rhs.data[i];
+	}	
+} 
+
+
